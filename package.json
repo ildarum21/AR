@@ -4,8 +4,7 @@
   "author": "q-digital",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "react-scripts": "3.4.1",
     "node-sass": "^4.14.1"

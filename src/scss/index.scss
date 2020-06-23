@@ -2,3 +2,42 @@
 @import "components/reset";
 
 @import "components/app";
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #161e2e;
+}
+.buttons { 
+  width: 24%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  ;
+}
+#pc {
+  text-decoration: none;
+  font-size:35px;
+  line-height: 41px;
+  text-align: center;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  background: #0391f4;
+  border-radius: 10px;
+  color: #ffffff;
+}
+#phone {
+  text-decoration: none;
+  font-size:35px;
+  line-height: 41px;
+  text-align: center;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  background: #f41600;
+  border-radius: 10px;
+  color:#fff;
+}
