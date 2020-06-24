@@ -9,35 +9,20 @@
   <link rel="stylesheet" href="./scss/index.css">
   <title>Document</title>
 </head>
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-
-<body style="margin : 0px; overflow: hidden;">
-<a class ="backmob" href="/index">Назад</a>
-  <div class="arjs-loader">
+  <body>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	<div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
-  <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-  >
-    <a-assets>
-    <img id="vid" src="./ImagesAR/1pic.jpeg" alt="123">
-    </a-assets>
-    <a-nft
-      type="nft"
-      url="./ImagesAR/descr/Marker1"
-      smooth="true"
-      smoothount="10"
-      smoothtolerance="0.01"
-      smooththreshold="5"
-    >
-      <a-image src="#vid" rotation="90 0 180" position="100 100 -100" width="400" height="300"> </a-image>
-    </a-nft>
-    <a-entity camera></a-entity>
-  </a-scene>
+	<a-scene embedded arjs>
+		<a-marker url="hiro">
+			<a-entity scale =".2 .2 .2">
+        <a-box color="tomato" depth="60" height="300" width="300" scale="-1 1 1"></a-box>
+      </a-entity>
+		</a-marker>
+		<a-entity camera></a-entity>
+	</a-scene>
+
 </body>
 </html>
