@@ -4,55 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="example" rel="stylesheet/scss" type="text/css">
   <link rel="manifest" href="./manifest.json" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./scss/index.css">
   <title>Document</title>
 </head>
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-<style>
-  .arjs-loader {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .arjs-loader div {
-    text-align: center;
-    font-size: 1.25em;
-    color: white;
-  }
-  .back {
-    color: white;
-    text-align: center;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 41px;
-    text-decoration: none;
-    position: absolute;
-    width:98%;
-    top:2%;
-    left:1%;
-    background: #0391F4;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    z-index:10000;
-  }
-</style>
-
 <body style="margin : 0px; overflow: hidden;">
-<a class ="back" href="/index">Назад</a>
+<a class ="backmob" href="/index">Назад</a>
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
@@ -65,7 +27,6 @@
     <a-assets>
     <img id="vid" src="./ImagesAR/1pic.jpeg" alt="123">
     </a-assets>
-    <!-- 50 150 -100 -->
     <a-nft
       type="nft"
       url="./ImagesAR/descr/Marker1"
