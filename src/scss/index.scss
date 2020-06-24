@@ -10,17 +10,16 @@
   height: 100%;
   background: #161e2e;
 }
-.buttons { 
+.buttons {
   width: 24%;
   display: flex;
   align-items: center;
-  
 }
 #pc {
   text-align: center;
   text-decoration: none;
-  font-size:35px;
-  font-family: 'Roboto';
+  font-size: 35px;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 35px;
@@ -37,7 +36,7 @@
   margin-left: 10px;
   text-align: center;
   text-decoration: none;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 35px;
@@ -47,7 +46,7 @@
   height: 50px;
   background: #f41600;
   border-radius: 10px;
-  color:#fff;
+  color: #fff;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 .div {
@@ -59,13 +58,17 @@
   background: #161e2e;
 }
 
-@media (max-width:414px){
-  .buttons { 
+
+
+
+
+@media (max-width: 414px) {
+  .buttons {
     flex-direction: column;
   }
   #phone {
     margin-left: 0px;
     margin-top: 10px;
-    
   }
-  }
+  
+}
