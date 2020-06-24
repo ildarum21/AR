@@ -4,29 +4,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="../src/scss/index.scss" rel="stylesheet">
   <title>Document</title>
 </head>
 <style>
-  .div {
+  body {
+    background: #161E2E;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 900px;
-    background: #161e2e;
   }
-
-  /* .cat {
-   width: 60%;
-    height: 40%;
-  } */
+  .cat {
+    width: 800px;
+    height: 600px;
+  }
+  .back {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 41px;
+    text-decoration: none;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 20px;
+    top: 20px;
+    background: #0391F4;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
 </style>
 
 <body>
-  <div class="div">
-    <img src="./ImagesAR/Marker1.jpeg" class="cat" alt="loading">
+  <div>
+    <a class="back" href="/index"> НАЗАД </a>
   </div>
-  <h1>1</h1>
+  <img src="./ImagesAR/Marker1.jpeg" class="cat" alt="loading">
+
 </body>
 
 </html>
