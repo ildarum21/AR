@@ -5,45 +5,35 @@
     <title>Gesture Interactions - A-Frame & AR.js</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="styles.css">
-
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="gesture-detector.js"></script>
-    <script src="gesture-handler.js"></script>
+    <link rel="stylesheet" href="scss/index.css">
   </head>
+ <script
+    src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-  <body>
-    <a-scene
-      arjs
-      embedded
-      renderer="logarithmicDepthBuffer: true;"
-      vr-mode-ui="enabled: false"
-      gesture-detector
-      id="scene"
+
+
+<body style="margin : 0px; overflow: hidden;">
+  <div class="backmob">
+		Назад
+  </div>
+  <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div>
+  <a-scene
+    vr-mode-ui="enabled: false;"
+    renderer="logarithmicDepthBuffer: false;"
+    embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+  >
+    <a-nft
+      type="nft"
+     url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
+	  smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5"
     >
-      <a-assets>
-        <a-asset-item
-          id="bowser"
-          src="https://cdn.glitch.com/06bd98b4-97ee-4c07-a546-fe39ca205034%2Fbowser.glb"
-        >
-        </a-asset-item>
-      </a-assets>
-
-      <a-marker
-        url="./ImagesAR/Marker1.patt"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA"
-      >
-		<a-box position="0 0 0"
-		rotation="0 0 0"
-		color="#FF0"
-		class ="clickable"
-		></a-box>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+	 <a-box color="tomato" width="400" height="300" rotation="90 0 0" position="200 0 10 "></a-box>
+    </a-nft>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
 </html>
