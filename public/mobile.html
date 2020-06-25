@@ -1,41 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="./manifest.json" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./scss/index.css">
-  <title>Document</title>
-</head>
+<html>
+  <head>
+    <title>Gesture Interactions - A-Frame & AR.js</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="scss/index.css">
+  </head>
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
+
+
 <body style="margin : 0px; overflow: hidden;">
-<a class ="backmob" href="/index">Назад</a>
+  <div class="backmob">
+		Назад
+  </div>
   <div class="arjs-loader">
     <div>Loading, please wait...</div>
   </div>
   <a-scene
+  depth="false"
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
     embedded
-    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
-    <a-assets>
-    <img id="vid" src="./ImagesAR/1pic.jpeg" alt="123">
-    </a-assets>
     <a-nft
       type="nft"
-      url="./ImagesAR/descr/Marker1"
-      smooth="true"
-      smoothount="10"
-      smoothtolerance="0.01"
-      smooththreshold="5"
+      url="ImagesAR/descr/Marker1"
     >
-      <a-image src="#vid" rotation="90 0 180" position="100 100 -100" width="400" height="300"> </a-image>
+	 <a-box color="tomato" depth="100" height="300" width="400" rotation="-90 0 0" position="200 0 -300 "></a-box>
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
